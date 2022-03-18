@@ -1,0 +1,10 @@
+#!/bin/sh -e
+#
+# update now
+
+sed -i '$d' site/now
+
+printf '%s\n' "$(date '+Last updated on %-d %b %Y, at %R.')" \
+    >> site/now
+
+vi site/now

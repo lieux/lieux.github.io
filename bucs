@@ -11,7 +11,7 @@ find site -type f | while read -r file; do
 
     case ${file##*/} in
         *.*) cp -f "$file" "$dest" ;;
-        *)   cat temp/a "$file" temp/b > "${dest}.html" ;;
+        *)   cat temp/a "$file" temp/b > "$dest.html" ;;
     esac
 done
 
